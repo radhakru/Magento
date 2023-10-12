@@ -6,18 +6,20 @@ package com.magento.StepDefination;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import com.magento.Webobject.ModileitemverifyObject;
+import com.magento.Webobject.MobileitemverifyObject;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Mobileitemverify extends Base {
-	private WebDriver driver;
+	private static WebDriver driver;
 
-	private ModileitemverifyObject mivo;
+	private MobileitemverifyObject mivo;
 	private JavascriptExecutor jse;
 
 	@Before
@@ -36,7 +38,7 @@ public class Mobileitemverify extends Base {
 
 	@When("verify title of the main page")
 	public void verify_title_of_the_main_page() throws InterruptedException {
-		mivo = new ModileitemverifyObject(driver);
+		mivo = new MobileitemverifyObject(driver);
 		mivo.verify_The_Main_Page_Title("Home page");
 		Thread.sleep(2000);
 
@@ -67,8 +69,8 @@ public class Mobileitemverify extends Base {
 		mivo.sortItemverify();
 	}
 
-	@After
-	public void tear() {
+	@AfterAll
+	public static void tear() {
 		driver.close();
 	}
 

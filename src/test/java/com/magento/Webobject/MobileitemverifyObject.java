@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class ModileitemverifyObject {
+public class MobileitemverifyObject {
 
 	private WebDriver ldriver;
 	private Select select;
@@ -18,7 +18,7 @@ public class ModileitemverifyObject {
 	private static int prev = 0;
 	private static int pres = 0;
 
-	public ModileitemverifyObject(WebDriver rdriver) {
+	public MobileitemverifyObject(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}

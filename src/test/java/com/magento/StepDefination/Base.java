@@ -9,7 +9,6 @@ abstract class Base {
 	
 	private static WebDriver driver;
 	
-	
 	public static WebDriver getDriver() {
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//Drivers//chromedrivernew.exe");
 		
