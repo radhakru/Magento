@@ -7,7 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features={"./features/Mobileitemverify.feature","./features/Verifyproductprice.feature"},
+		features={"./features/Mobileitemverify.feature",
+				"./features/Verifyproductprice.feature",
+				"./features/Verifyquantityforcart.feature"},
 		glue={"com/magento/StepDefination"},
 		dryRun=false,
 		monochrome=true
