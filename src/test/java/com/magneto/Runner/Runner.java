@@ -8,7 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features={//"./features/Verifycompareproducts.feature",
-				"./features/Verify_create_account_and_share_WISHLIST_to_other.feature"},
+				//"./features/Verify_create_account_and_share_WISHLIST_to_other.feature"},
+				"./features/VerifyLoginUserPurchaseProduct.feature"},
+				
 		glue={"com/magento/StepDefination"},
 		dryRun=false,
 		monochrome=true
