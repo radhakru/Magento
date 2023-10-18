@@ -30,6 +30,9 @@ public class VerifyLoginUserCanPurchaseOrderObject {
 	}
 	
 	
+	
+	
+	
 	private By login_EmailId=By.id("email");
 	private By login_Password=By.id("pass");
 	private By loginbutton=By.id("send2");
@@ -62,6 +65,199 @@ public class VerifyLoginUserCanPurchaseOrderObject {
 	private By orderReviewPlaceOrderButton=By.xpath("//button[@class='button btn-checkout']");
 	private By orderId=By.xpath("//div[@class='col-main']/p/a");
 	private By orderSuccessfulMes=By.xpath("//div[@class='col-main']/div/h1");
+	
+	
+	
+	public void setLdriver(WebDriver ldriver) {
+		this.ldriver = ldriver;
+	}
+
+	public By getAccount() {
+		return Account;
+	}
+
+	public void setAccount(By account) {
+		Account = account;
+	}
+
+	public By getListitem() {
+		return Listitem;
+	}
+
+	public void setListitem(By listitem) {
+		Listitem = listitem;
+	}
+
+	public By getAddToCart() {
+		return addToCart;
+	}
+
+	public void setAddToCart(By addToCart) {
+		this.addToCart = addToCart;
+	}
+
+	public By getEstimate() {
+		return estimate;
+	}
+
+	public void setEstimate(By estimate) {
+		this.estimate = estimate;
+	}
+
+	public By getCart_price() {
+		return cart_price;
+	}
+
+	public void setCart_price(By cart_price) {
+		this.cart_price = cart_price;
+	}
+
+	public By getFlatRate() {
+		return FlatRate;
+	}
+
+	public void setFlatRate(By flatRate) {
+		FlatRate = flatRate;
+	}
+
+	public By getFixedprice() {
+		return fixedprice;
+	}
+
+	public void setFixedprice(By fixedprice) {
+		this.fixedprice = fixedprice;
+	}
+
+	public By getBillingAddress() {
+		return billingAddress;
+	}
+
+	public void setBillingAddress(By billingAddress) {
+		this.billingAddress = billingAddress;
+	}
+
+	public By getBillingCity() {
+		return billingCity;
+	}
+
+	public void setBillingCity(By billingCity) {
+		this.billingCity = billingCity;
+	}
+
+	public By getBillingstate() {
+		return billingstate;
+	}
+
+	public void setBillingstate(By billingstate) {
+		this.billingstate = billingstate;
+	}
+
+	public By getBillingZipcode() {
+		return billingZipcode;
+	}
+
+	public void setBillingZipcode(By billingZipcode) {
+		this.billingZipcode = billingZipcode;
+	}
+
+	public By getBillingregion() {
+		return billingregion;
+	}
+
+	public void setBillingregion(By billingregion) {
+		this.billingregion = billingregion;
+	}
+
+	public By getBillingPhone() {
+		return billingPhone;
+	}
+
+	public void setBillingPhone(By billingPhone) {
+		this.billingPhone = billingPhone;
+	}
+
+	public By getBillingCountinueButton() {
+		return billingCountinueButton;
+	}
+
+	public void setBillingCountinueButton(By billingCountinueButton) {
+		this.billingCountinueButton = billingCountinueButton;
+	}
+
+	public Select getSelect() {
+		return select;
+	}
+
+	public Robot getRobot() {
+		return robot;
+	}
+
+	public By getLogin_EmailId() {
+		return login_EmailId;
+	}
+
+	public By getLogin_Password() {
+		return login_Password;
+	}
+
+	public By getLoginbutton() {
+		return loginbutton;
+	}
+
+	public By getProceedToCheckout() {
+		return proceedToCheckout;
+	}
+
+	public By getSelectForContry() {
+		return selectForContry;
+	}
+
+	public By getSelectForReligion() {
+		return selectForReligion;
+	}
+
+	public By getPincode() {
+		return pincode;
+	}
+
+	public By getTotal_Price() {
+		return total_Price;
+	}
+
+	public By getUpdateButton() {
+		return updateButton;
+	}
+
+	public By getSceondproceedTocheckbutton() {
+		return sceondproceedTocheckbutton;
+	}
+
+	public By getShippingMethodContinue() {
+		return shippingMethodContinue;
+	}
+
+	public By getPaymentInformationCheckRadioButton() {
+		return paymentInformationCheckRadioButton;
+	}
+
+	public By getPaymentInformationCountinue() {
+		return paymentInformationCountinue;
+	}
+
+	public By getOrderReviewPlaceOrderButton() {
+		return orderReviewPlaceOrderButton;
+	}
+
+	public By getOrderId() {
+		return orderId;
+	}
+
+	public By getOrderSuccessfulMes() {
+		return orderSuccessfulMes;
+	}
+	
+	
+	
 	
 	
 	
@@ -158,6 +354,8 @@ public class VerifyLoginUserCanPurchaseOrderObject {
 	}
 	
 	
+	
+
 	//again click on proceed to checkout button
 	public void clickOnSecondProceedToCheckOutButton() {
 		ldriver.findElement(sceondproceedTocheckbutton).click();

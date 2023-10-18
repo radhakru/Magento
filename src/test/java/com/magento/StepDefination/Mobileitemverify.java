@@ -6,6 +6,7 @@ package com.magento.StepDefination;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import com.magento.Utility.PropertiesUtility;
 import com.magento.Webobject.MobileitemverifyObject;
 
 import io.cucumber.java.After;
@@ -21,19 +22,22 @@ public class Mobileitemverify extends Base {
 
 	private MobileitemverifyObject mivo;
 	private JavascriptExecutor jse;
+	private PropertiesUtility pu;
 
 	@Before
 	public void setUP() {
 		driver=getDriver();
 		driver.manage().window().maximize();
 		jse=(JavascriptExecutor)driver;
-		
+		pu =new PropertiesUtility();
 		
 	}
 
 	@Given("go to url")
 	public void go_to_url() {
-		driver.get("http://live.techpanda.org/index.php/");
+		
+		//driver.get("http://live.techpanda.org/index.php/");
+		driver.get(pu.getUrl());
 	}
 
 	@When("verify title of the main page")

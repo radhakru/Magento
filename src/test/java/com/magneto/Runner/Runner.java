@@ -11,7 +11,11 @@ import io.cucumber.junit.CucumberOptions;
 
 				//"./features/Verify_create_account_and_share_WISHLIST_to_other.feature"},
 				//"./features/VerifyLoginUserPurchaseProduct.feature",
-				"./features/Verifyyourpreviousordersaveaspdf.feature"
+				//"./features/Verifyyourpreviousordersaveaspdf.feature"
+				
+				//"./features/Mobileitemverify.feature"
+				
+				"./features/Verifyyoucan_change_or_reorder_previously_added_product.feature"
 				
 		},
 				
@@ -25,5 +29,6 @@ import io.cucumber.junit.CucumberOptions;
 
 
 public class Runner {
+	
 
 }
