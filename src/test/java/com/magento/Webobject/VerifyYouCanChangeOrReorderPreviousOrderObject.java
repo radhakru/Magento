@@ -44,7 +44,7 @@ public class VerifyYouCanChangeOrReorderPreviousOrderObject {
 		ldriver.findElement(editQuantity).clear();
 		ldriver.findElement(editQuantity).sendKeys(Quantity);
 	}
-	public void clcikOnUpdateButton() {
+	public void clickOnUpdateButton() {
 		ldriver.findElement(updateButton).click();
 	}
 	public void clickoncontinueBillingButton(WebDriver driver) {

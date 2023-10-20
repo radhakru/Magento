@@ -7,7 +7,9 @@ When click on Account button
 Then Login in application using previously created emailID.
 Then click on MY ORDER link
 Then click on REORDER link
-Then change the quantity of product and click on update "<Quantity>"
+Then change the quantity of product and click on update 
+|quantity|
+|10|
 ##Then verify the shipping cost is added to total
 Then click PROCEED TO CHECKOUT
 Then click on Billing Information continue button
@@ -17,6 +19,6 @@ Then click on PLACED ORDER button
 Then verify order is generated.Note the Order Number.
 
 
-Examples:
-|Quantity|
-|10|
+##Examples:
+##|Quantity|
+##|10|
