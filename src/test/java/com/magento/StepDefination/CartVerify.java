@@ -3,6 +3,7 @@ package com.magento.StepDefination;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import com.magento.Utility.PropertiesUtility;
 import com.magento.Webobject.CartverifyObject;
 
 import io.cucumber.java.en.*;
@@ -12,6 +13,7 @@ public class CartVerify extends Base{
 	private WebDriver driver;
 	private CartverifyObject cvo;
 	private JavascriptExecutor js;
+	private PropertiesUtility pu;
 	
 	
 	@Then("Add to card")
@@ -19,6 +21,7 @@ public class CartVerify extends Base{
 		driver=getDriver();
 		cvo=new CartverifyObject(driver);
 		js=(JavascriptExecutor) driver;
+		pu=getPropertiesClass();
 		cvo.click_On_Add_To_Cart();
 		js.executeScript("window.scrollBy(0,100)","");
 		
@@ -29,7 +32,12 @@ public class CartVerify extends Base{
 	@Then("Verify product should be added in card page")
 	public void verify_product_should_be_added_in_card_page() throws InterruptedException {
 		Thread.sleep(3000);
-		cvo.verify_Success_Message("Sony Xperia was added to your shopping cart.");
+		//cvo.verify_Success_Message("Sony Xperia was added to your shopping cart.");
+		
+		
+		//new Code
+		cvo.verify_Success_Message(pu.getProductSuccessfullyAdded());
+		
 	}    	
 
 	@Then("Update the product quantity to {int}")
@@ -42,8 +50,13 @@ public class CartVerify extends Base{
 
 	@Then("verify the error message")
 	public void verify_the_error_message() {
-	    cvo.verify_Error_Message("Some of the products cannot be ordered in requested quantity.");
-	    js.executeScript("window.scrollBy(0,200)", "");
+	   // cvo.verify_Error_Message("Some of the products cannot be ordered in requested quantity.");
+	    
+		
+		//new Code
+		cvo.verify_Error_Message(pu.getProductQunatity());
+		
+		js.executeScript("window.scrollBy(0,200)", "");
 	}
 
 	@Then("click on Empty card link in the footer of the all mobiles")
@@ -53,7 +66,10 @@ public class CartVerify extends Base{
 
 	@Then("verify card is empty")
 	public void verify_card_is_empty() {
-	    cvo.verify_The_Emptycart_Page_Message("Shopping Cart is Empty");
+	   // cvo.verify_The_Emptycart_Page_Message("Shopping Cart is Empty");
+		
+		//new Code
+		cvo.verify_The_Emptycart_Page_Message(pu.getCartMes());
 	}
 	
 	

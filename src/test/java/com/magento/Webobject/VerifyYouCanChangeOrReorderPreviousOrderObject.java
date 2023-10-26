@@ -31,7 +31,7 @@ public class VerifyYouCanChangeOrReorderPreviousOrderObject {
 		return updateButton;
 	}
 
-	private By reOrder=By.xpath("//tr[@class='first odd']/td[6]/span/a[2]");
+	private By reOrder=By.xpath("//tr[@class='first last odd']/td[6]/span/a[2]");
 	private By editQuantity=By.xpath("//td[@class='product-cart-actions']/input");
 	private By updateButton=By.xpath("//td[@class='product-cart-actions']/button");
 	

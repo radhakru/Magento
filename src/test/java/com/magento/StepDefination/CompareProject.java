@@ -5,6 +5,7 @@ import java.awt.AWTException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import com.magento.Utility.PropertiesUtility;
 import com.magento.Webobject.CompareProductsObject;
 
 import io.cucumber.java.en.Then;
@@ -14,6 +15,7 @@ public class CompareProject extends Base {
 	private WebDriver driver;
 	private CompareProductsObject cpo;
 	private JavascriptExecutor js;
+	private PropertiesUtility pu;
 	
 	
 	@Then("click on add to compare button for two phone")
@@ -21,6 +23,7 @@ public class CompareProject extends Base {
 	   driver=getDriver();
 	   cpo=new CompareProductsObject(driver);
 	   js=(JavascriptExecutor)driver;
+	   pu=getPropertiesClass();
 	   cpo.click_On_Mobile_For_Add_To_Compare();
 	   Thread.sleep(2000);
 	}
@@ -32,7 +35,11 @@ public class CompareProject extends Base {
 
 	@Then("verify the pop-up and mobile names")
 	public void verify_the_pop_up_and_mobile_names() throws AWTException {
-		cpo.verify_Compare_Items("IPHONE", "SONY XPERIA");
+		//cpo.verify_Compare_Items("IPHONE", "SONY XPERIA");
+		
+		
+		//new Code
+		cpo.verify_Compare_Items(pu.getIPhoneText(), pu.getSonyExperiaText());
 	}
 
 	@Then("close the pop-up.")

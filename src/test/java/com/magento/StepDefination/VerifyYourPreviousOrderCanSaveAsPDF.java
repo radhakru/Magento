@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import com.magento.Utility.PropertiesUtility;
 import com.magento.Webobject.VerifyYourPreviousOrderCanBeSaveAsPdfObject;
 
 import io.cucumber.java.en.Then;
@@ -14,10 +15,12 @@ public class VerifyYourPreviousOrderCanSaveAsPDF extends Base{
 	private WebDriver driver;
 	private JavascriptExecutor js;
 	private VerifyYourPreviousOrderCanBeSaveAsPdfObject vypocbsap;
+	private PropertiesUtility pu;
 	
 	@Then("click on MY ORDER link")
 	public void click_on_my_order_link() {
 		driver=getDriver();
+		pu=getPropertiesClass();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		vypocbsap=new VerifyYourPreviousOrderCanBeSaveAsPdfObject(driver);  
 		vypocbsap.clickOnMyOrderLink();
@@ -25,8 +28,12 @@ public class VerifyYourPreviousOrderCanSaveAsPDF extends Base{
 
 	@Then("Verify the order Id and status is pending")
 	public void verify_the_order_id_and_status_is_pending() {
-		String orderId="100020165";
-	    vypocbsap.verifyOrderIdAndStatus(orderId);
+		//String orderId="100020165";
+	   // vypocbsap.verifyOrderIdAndStatus(orderId);
+		
+		
+		//new Code
+		 vypocbsap.verifyOrderIdAndStatus(pu.getOrderId());
 	}
 
 	@Then("click on VIEW ORDER link")

@@ -8,14 +8,16 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features={//"./features/Verifycompareproducts.feature",
+				
+				//"./features/Verifyquantityforcart.feature"
 
-				//"./features/Verify_create_account_and_share_WISHLIST_to_other.feature"},
+				//"./features/Verify_create_account_and_share_WISHLIST_to_other.feature",
 				//"./features/VerifyLoginUserPurchaseProduct.feature",
-				//"./features/Verifyyourpreviousordersaveaspdf.feature"
+				"./features/Verifyyourpreviousordersaveaspdf.feature"
 				
 				//"./features/Mobileitemverify.feature"
 				
-				"./features/Verifyyoucan_change_or_reorder_previously_added_product.feature"
+				//"./features/Verifyyoucan_change_or_reorder_previously_added_product.feature"
 				
 		},
 				

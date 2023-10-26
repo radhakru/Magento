@@ -3,6 +3,7 @@ package com.magento.StepDefination;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import com.magento.Utility.PropertiesUtility;
 import com.magento.Webobject.AccountCreateAndWishListShareObject;
 
 import io.cucumber.java.en.*;
@@ -12,12 +13,14 @@ public class VeriifyAcoountCreationAndShareWishList extends Base{
 	private WebDriver driver;
 	private AccountCreateAndWishListShareObject acaws;
 	private JavascriptExecutor js;
+	private PropertiesUtility pu;
 
 	@When("click on Account button")
 	public void click_on_account_button() {
 		driver=getDriver();
 		acaws=new AccountCreateAndWishListShareObject(driver);
 		js=(JavascriptExecutor)driver;
+		pu=getPropertiesClass();
 		acaws.click_On_Account();
 	}
 
@@ -46,9 +49,12 @@ public class VeriifyAcoountCreationAndShareWishList extends Base{
 
 	@Then("verify the RSGISTATION SUCCESSFUL MESSAGE.")
 	public void verify_the_rsgistation_successful_message() {
-		String SuccessfulRegistor="Thank you for registering with Main Website Store.";
-		acaws.verify_Successful_Mes_For_Resistation(SuccessfulRegistor);
-		System.out.println("Hi");
+		//String SuccessfulRegistor="Thank you for registering with Main Website Store.";
+		//acaws.verify_Successful_Mes_For_Resistation(SuccessfulRegistor);
+		
+		//new Code
+		acaws.verify_Successful_Mes_For_Resistation(pu.getUserRegistationMes());
+	
 	}
 
 	@Then("click on TV menu")
@@ -67,8 +73,11 @@ public class VeriifyAcoountCreationAndShareWishList extends Base{
 
 	@Then("Verify the SUCCESSFUL MESSAGE FOR TV ADDED TO WISHLIST.")
 	public void verify_the_successful_message_for_tv_added_to_wishlist() {
-		String wishlist="LG LCD has been added to your wishlist. Click here to continue shopping.";
-		acaws.verify_Sucessful_Add_Message(wishlist);
+		//String wishlist="LG LCD has been added to your wishlist. Click here to continue shopping.";
+		//acaws.verify_Sucessful_Add_Message(wishlist);
+		
+		//new Code
+		acaws.verify_Sucessful_Add_Message(pu.getUserWishListMes());
 	}
 
 	@Then("Click on SHARE WISHLIST button")
@@ -81,10 +90,16 @@ public class VeriifyAcoountCreationAndShareWishList extends Base{
 	@Then("Enter email Id and message and click on SHARE WISHLIST BUTTON")
 	public void enter_email_id_and_message_and_click_on_share_wishlist_button() throws InterruptedException {
 		Thread.sleep(2000);
-		String emailId="h@gmail.com";
-		String message="This is for demo purpose";
-		acaws.Enter_EmailId_For_Share_Wishlist(emailId);
-		acaws.Enter_Message(message);
+		//String emailId="h@gmail.com";
+		//String message="This is for demo purpose";
+		//acaws.Enter_EmailId_For_Share_Wishlist(emailId);
+		//acaws.Enter_Message(message);
+		
+		//new Code
+		acaws.Enter_EmailId_For_Share_Wishlist(pu.getShareEmailId());
+		acaws.Enter_Message(pu.getShareMes());
+		
+		
 		js.executeScript("window.scrollBy(0,200)", "");
 		acaws.click_On_Final_Share_wishList_button();
 	}
@@ -92,8 +107,11 @@ public class VeriifyAcoountCreationAndShareWishList extends Base{
 	@Then("verify the SUCCESSFUL MESSAGE FOR SHARE WISHLIST.")
 	public void verify_the_successful_message_for_share_wishlist() throws InterruptedException {
 		Thread.sleep(2000);
-		String shareSuccessfulMes="Your Wishlist has been shared.";
-		acaws.verify_The_Successful_Message_For_Share_Wishlist(shareSuccessfulMes);
+		//String shareSuccessfulMes="Your Wishlist has been shared.";
+		//acaws.verify_The_Successful_Message_For_Share_Wishlist(shareSuccessfulMes);
+		
+		//new Code
+		acaws.verify_The_Successful_Message_For_Share_Wishlist(pu.getUserWishListShare());
 	}
 
 }

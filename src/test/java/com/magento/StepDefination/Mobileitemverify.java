@@ -29,7 +29,7 @@ public class Mobileitemverify extends Base {
 		driver=getDriver();
 		driver.manage().window().maximize();
 		jse=(JavascriptExecutor)driver;
-		pu =new PropertiesUtility();
+		pu =getPropertiesClass();
 		
 	}
 
@@ -43,7 +43,12 @@ public class Mobileitemverify extends Base {
 	@When("verify title of the main page")
 	public void verify_title_of_the_main_page() throws InterruptedException {
 		mivo = new MobileitemverifyObject(driver);
-		mivo.verify_The_Main_Page_Title("Home page");
+		
+		
+		//mivo.verify_The_Main_Page_Title("Home page");
+		
+		//new code
+		mivo.verify_The_Main_Page_Title(pu.getHomepageTitle());
 		Thread.sleep(2000);
 
 	}
@@ -58,13 +63,23 @@ public class Mobileitemverify extends Base {
 
 	@Then("verify title of the mobile page")
 	public void verify_title_of_the_mobile_page() throws InterruptedException {
-		mivo.verify_The_Mobile_Page_Title("Mobile");
+		
+		//need to change
+		//mivo.verify_The_Mobile_Page_Title("Mobile");
+		
+		//new code
+		mivo.verify_The_Mobile_Page_Title(pu.getMobilepageTitle());
 		Thread.sleep(2000);
 	}
 
 	@Then("in the list of all mobile . select SORT BY dropdown as name")
 	public void in_the_list_of_all_mobile_select_sort_by_dropdown_as_name() {
-		mivo.select_Item_By_SORT_Dropdown_As_Name("Name");
+		
+		//mivo.select_Item_By_SORT_Dropdown_As_Name("Name");
+		
+		
+		//new code
+		mivo.select_Item_By_SORT_Dropdown_As_Name(pu.SortByName());
 
 	}
 

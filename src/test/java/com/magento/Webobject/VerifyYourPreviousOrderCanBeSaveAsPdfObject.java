@@ -29,7 +29,10 @@ public class VerifyYourPreviousOrderCanBeSaveAsPdfObject {
 	
 	private By allTagsOfAccounts=By.xpath("//div[@class='block-content']/ul/li/a");
 	
-	private By ActualOdrerId=By.xpath("//tr[@class='first last odd']/td[@class='number']");
+	//private By ActualOdrerId=By.xpath("//tr[@class='first last odd']/td[@class='number']");
+	
+	//modify code
+	private By ActualOdrerId=By.xpath("//tr[@class='first odd']/td[@class='number']");
 	
 	private By orderStatus=By.xpath("//td[@class='status']/em");
 	

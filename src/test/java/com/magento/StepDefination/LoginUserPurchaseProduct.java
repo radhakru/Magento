@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import com.magento.Utility.PropertiesUtility;
 import com.magento.Webobject.VerifyLoginUserCanPurchaseOrderObject;
 
 import io.cucumber.java.en.Then;
@@ -14,14 +15,21 @@ public class LoginUserPurchaseProduct extends Base {
 	private WebDriver driver;
 	private VerifyLoginUserCanPurchaseOrderObject vlucpo;
 	private JavascriptExecutor js;
+	private PropertiesUtility pu;
 
 	@Then("Login in application using previously created emailID.")
 	public void login_in_application_using_previously_created_email_id() throws InterruptedException {
 		driver = getDriver();
 		vlucpo = new VerifyLoginUserCanPurchaseOrderObject(driver);
 		js = (JavascriptExecutor) driver;
-		vlucpo.enter_EmailId("wi-005@gmail.com");
-		vlucpo.enter_Password("12345678");
+		pu=getPropertiesClass();
+		//vlucpo.enter_EmailId("wi-005@gmail.com");
+		//vlucpo.enter_Password("12345678");
+		
+		vlucpo.enter_EmailId(pu.getuserEmailId());
+		vlucpo.enter_Password(pu.getuserPassword());
+		
+		
 		vlucpo.clickOnLoginButton();
 		Thread.sleep(2000);
 
@@ -46,7 +54,7 @@ public class LoginUserPurchaseProduct extends Base {
 
 	@Then("Select Shipping Information")
 	public void select_shipping_information() {
-		vlucpo.selectState_And_Religion_And_Pincode_For_Shipping("United States", "New York", "542896");
+		vlucpo.selectState_And_Religion_And_Pincode_For_Shipping(pu.getshippingState(), pu.getshippingReligon(), pu.getshippingPincode());
 
 	}
 
@@ -86,18 +94,20 @@ public class LoginUserPurchaseProduct extends Base {
 	@Then("Enter Billing Information")
 	public void enter_billing_information() throws InterruptedException {
 		js.executeScript("window.scrollBy(0,200)", "");
-		vlucpo.Enter_Bill_Address("ABC");
-		vlucpo.Enter_Bill_City("Abhayamukhi");
+		
+		vlucpo.Enter_Bill_Address(pu.getbillAddress());
+		
+		vlucpo.Enter_Bill_City(pu.getbillCity());
 		js.executeScript("window.scrollBy(0,300)", "");
 		Thread.sleep(2000);
-		vlucpo.Enter_Bill_State("New York");
-		vlucpo.Enter_Bill_Zipcode("589765");
+		vlucpo.Enter_Bill_State(pu.getbillState());
+		vlucpo.Enter_Bill_Zipcode(pu.getbillZipCode());
 
 		js.executeScript("window.scrollBy(0,200)", "");
-		vlucpo.Enter_Bill_Region("United States");
+		vlucpo.Enter_Bill_Region(pu.getbillRegison());
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,200)", "");
-		vlucpo.Enter_Bill_PhoneNumber("12345678");
+		vlucpo.Enter_Bill_PhoneNumber(pu.getbillPhoneNumber());
 		vlucpo.clickOnContinueForBilling();
 
 	}

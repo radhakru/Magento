@@ -21,7 +21,6 @@ Then verify the SUCCESSFUL MESSAGE FOR SHARE WISHLIST.
 
 Examples:
 |userFirstName|userLastname|userEmailId|userPassword|userConfirmpassword|
-##|rama-12|Leo|Ra_12@gmail.com|12345678|12345678|
-##|Rag-12|Broke|Broke_12@gmail.com|1223455|1223455|
-|wi-003|Mag|wi-005@gmail.com|12345678|12345678|
-
+|rama-12|Leo|Ra_13@gmail.com|12345678|12345678|
+|Rag-12|Broke|Broke_13@gmail.com|1223455|1223455|
+|wi-004|Mag|wi-009@gmail.com|12345678|12345678|
