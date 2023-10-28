@@ -95,7 +95,7 @@ public class CompareProductsObject {
 			//store CompareListItem all element to the String
 			for (int i = 0; i < item.size(); i++) {
 				compareListItem[i] = item.get(i).getText();
-				System.out.println(compareListItem[i]);
+				System.out.println("items="+compareListItem[i]);
 			}
 			//for comparison
 			for (String str : compareListItem) {
@@ -106,6 +106,7 @@ public class CompareProductsObject {
 		}
 		//first close the pop-up window
 		ldriver.close();
+		ldriver.switchTo().window(parent);
 		Assert.assertTrue(value);
 
 	}

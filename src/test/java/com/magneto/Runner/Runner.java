@@ -7,13 +7,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features={//"./features/Verifycompareproducts.feature",
+		features={"./features/Verifycompareproducts.feature",
 				
 				//"./features/Verifyquantityforcart.feature"
 
 				//"./features/Verify_create_account_and_share_WISHLIST_to_other.feature",
 				//"./features/VerifyLoginUserPurchaseProduct.feature",
-				"./features/Verifyyourpreviousordersaveaspdf.feature"
+				//"./features/Verifyyourpreviousordersaveaspdf.feature"
 				
 				//"./features/Mobileitemverify.feature"
 				
@@ -24,9 +24,20 @@ import io.cucumber.junit.CucumberOptions;
 
 		glue={"com/magento/StepDefination"},
 		dryRun=false,
-		monochrome=true
+		monochrome=true,
 		
 		
+		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+		//plugin= {"me.jvt.cucumber.report.PrettyReports:target/cucumber"},
+		
+		/*
+		 * plugin= {"pretty", "json:target/Report/report.json",
+		 * "junit:target/Report/report.html",
+		 * "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+		 */
+		publish=true
+		
+				
 		)
 
 

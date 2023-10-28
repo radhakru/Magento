@@ -1,9 +1,14 @@
 package com.magento.StepDefination;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.magento.Utility.PropertiesUtility;
+
+
+import io.cucumber.java.Scenario;
 
 
 
@@ -26,6 +31,15 @@ abstract class Base {
 		return pru;
 	}
 	
+	//take Screenshot
+	public static void addScreenshot(Scenario scenario){
+		if(scenario.isFailed()) {
+
+	      final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	      scenario.attach(screenshot, "image/png", "image"); 
+		}
+		
+	}
 	
 
 	
