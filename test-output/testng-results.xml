@@ -2,84 +2,32 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-30T12:57:45 IST" name="Suite" finished-at="2023-10-30T12:57:56 IST" duration-ms="11951">
+  <suite started-at="2023-10-31T13:04:27 IST" name="Default suite" finished-at="2023-10-31T13:04:36 IST" duration-ms="8859">
     <groups>
     </groups>
-    <test started-at="2023-10-30T12:57:45 IST" name="Test" finished-at="2023-10-30T12:57:56 IST" duration-ms="11951">
-      <class name="com.mageno.TestngCase.TestNg">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:45 IST" name="beforeSuite" finished-at="2023-10-30T12:57:45 IST" duration-ms="19" status="PASS">
+    <test started-at="2023-10-31T13:04:27 IST" name="Default test" finished-at="2023-10-31T13:04:36 IST" duration-ms="8859">
+      <class name="com.mageno.TestngCase.ParallelTest2">
+        <test-method signature="chromeTest()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:27 IST" name="chromeTest" finished-at="2023-10-31T13:04:33 IST" duration-ms="5911" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:45 IST" name="setUp" finished-at="2023-10-30T12:57:48 IST" duration-ms="3301" status="PASS">
+        </test-method> <!-- chromeTest -->
+        <test-method signature="firefoxTest()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:33 IST" name="firefoxTest" finished-at="2023-10-31T13:04:36 IST" duration-ms="2437" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:48 IST" name="BeforeClass" finished-at="2023-10-30T12:57:48 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- firefoxTest -->
+        <test-method signature="firefoxTest()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:33 IST" name="firefoxTest" finished-at="2023-10-31T13:04:36 IST" duration-ms="2433" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:48 IST" name="beforeMethod" finished-at="2023-10-30T12:57:48 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- firefoxTest -->
+        <test-method signature="firefoxTest()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:33 IST" name="firefoxTest" finished-at="2023-10-31T13:04:36 IST" duration-ms="2431" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="testPriority_2()[pri:-1, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:48 IST" name="testPriority_2" finished-at="2023-10-30T12:57:48 IST" duration-ms="572" status="PASS">
+        </test-method> <!-- firefoxTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:36 IST" name="close" finished-at="2023-10-31T13:04:36 IST" duration-ms="356" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPriority_2 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:48 IST" name="afterMethod" finished-at="2023-10-30T12:57:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:48 IST" name="beforeMethod" finished-at="2023-10-30T12:57:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="test()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:48 IST" name="test" finished-at="2023-10-30T12:57:51 IST" duration-ms="2944" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:51 IST" name="afterMethod" finished-at="2023-10-30T12:57:51 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:51 IST" name="beforeMethod" finished-at="2023-10-30T12:57:51 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="testPriority_1()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:51 IST" name="testPriority_1" finished-at="2023-10-30T12:57:54 IST" duration-ms="2544" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPriority_1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:54 IST" name="afterMethod" finished-at="2023-10-30T12:57:54 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="testPriority()[pri:1, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:54 IST" name="testPriority" finished-at="2023-10-30T12:57:56 IST" duration-ms="2062" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPriority -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:54 IST" name="beforeMethod" finished-at="2023-10-30T12:57:54 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:56 IST" name="afterMethod" finished-at="2023-10-30T12:57:56 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:56 IST" name="AfterClass" finished-at="2023-10-30T12:57:56 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:56 IST" name="Teardown" finished-at="2023-10-30T12:57:56 IST" duration-ms="428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Teardown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.mageno.TestngCase.TestNg@5b218417]" started-at="2023-10-30T12:57:57 IST" name="afterSuite" finished-at="2023-10-30T12:57:57 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.mageno.TestngCase.TestNg -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- close -->
+      </class> <!-- com.mageno.TestngCase.ParallelTest2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

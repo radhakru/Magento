@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" parallel="methods" name="Parallel Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.mageno.TestngCase.TestNg">
+      <class name="com.mageno.TestngCase.ParallelTest2">
         <methods>
-          <include name="setup"/>
-          <include name="Teardown"/>
+          <include name="chromeTest"/>
         </methods>
-      </class> <!-- com.mageno.TestngCase.TestNg -->
+      </class> <!-- com.mageno.TestngCase.ParallelTest2 -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Parallel Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
