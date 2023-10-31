@@ -3,6 +3,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterGroups;
@@ -15,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestNg {
 	private WebDriver driver;
@@ -30,12 +32,19 @@ public class TestNg {
 		driver.close();
 
 	}
-
+	@Parameters({"browser"})
 	@BeforeTest
-	public void setUp() {
+	public void setUp(String browsername) {
 		System.out.println("@BeforeTest method  is executed....");
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//Drivers//chromedriver.exe");
+		
+		if(browsername.equalsIgnoreCase("chrome"))
+		{
 		driver = new ChromeDriver();
+		}
+		else if(browsername.equalsIgnoreCase("firefox")) {
+			driver=new FirefoxDriver();
+		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		
