@@ -4,10 +4,14 @@
   <test parallel="classes" thread-count="2"  name="Parallel Test">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="com.mageno.TestngCase.ParallelTest2"/>
-    <!--  <class name="com.mageno.TestngCase.ParallelTest"/>-->
-      <class name="com.mageno.TestngCase.TestNg"/>
-     <!--  <class name="com.magento.StepDefination.Mobileitemverify"/> -->
+      <!--  <class name="com.mageno.TestngCase.ParallelTest2"/>
+    
+      <class name="com.mageno.TestngCase.TestNg"/>-->
+      
+      
+      <class name="com.magento.TestngSteps.MobileItemVerify"/>
+      <class name="com.magento.TestngSteps.VerifyLoginUser"/>
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

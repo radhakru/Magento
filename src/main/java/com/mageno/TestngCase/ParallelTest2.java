@@ -1,8 +1,6 @@
 package com.mageno.TestngCase;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 public class ParallelTest2 extends Base{

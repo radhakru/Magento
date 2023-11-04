@@ -1,33 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-31T13:04:27 IST" name="Default suite" finished-at="2023-10-31T13:04:36 IST" duration-ms="8859">
+  <suite started-at="2023-11-04T18:30:11 IST" name="Suite" finished-at="2023-11-04T18:31:00 IST" duration-ms="49140">
     <groups>
     </groups>
-    <test started-at="2023-10-31T13:04:27 IST" name="Default test" finished-at="2023-10-31T13:04:36 IST" duration-ms="8859">
-      <class name="com.mageno.TestngCase.ParallelTest2">
-        <test-method signature="chromeTest()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:27 IST" name="chromeTest" finished-at="2023-10-31T13:04:33 IST" duration-ms="5911" status="PASS">
+    <test started-at="2023-11-04T18:30:11 IST" name="Parallel Test" finished-at="2023-11-04T18:31:00 IST" duration-ms="49140">
+      <class name="com.magento.TestngSteps.VerifyLoginUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.magento.TestngSteps.VerifyLoginUser@2cb4893b]" started-at="2023-11-04T18:30:20 IST" name="setUp" finished-at="2023-11-04T18:30:28 IST" duration-ms="7821" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- chromeTest -->
-        <test-method signature="firefoxTest()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:33 IST" name="firefoxTest" finished-at="2023-10-31T13:04:36 IST" duration-ms="2437" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.magento.TestngSteps.VerifyLoginUser@2cb4893b]" started-at="2023-11-04T18:30:30 IST" name="loginTest" data-provider="LoginData" finished-at="2023-11-04T18:30:38 IST" duration-ms="8521" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ra_18@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ra@1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- firefoxTest -->
-        <test-method signature="firefoxTest()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:33 IST" name="firefoxTest" finished-at="2023-10-31T13:04:36 IST" duration-ms="2433" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.magento.TestngSteps.VerifyLoginUser@2cb4893b]" started-at="2023-11-04T18:30:38 IST" name="loginTest" data-provider="LoginData" finished-at="2023-11-04T18:30:44 IST" duration-ms="5518" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Broke_19@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ @34556  ]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- firefoxTest -->
-        <test-method signature="firefoxTest()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:33 IST" name="firefoxTest" finished-at="2023-10-31T13:04:36 IST" duration-ms="2431" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.magento.TestngSteps.VerifyLoginUser@2cb4893b]" started-at="2023-11-04T18:30:44 IST" name="loginTest" data-provider="LoginData" finished-at="2023-11-04T18:30:51 IST" duration-ms="6954" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wi~5@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5678@gm]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- firefoxTest -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.mageno.TestngCase.ParallelTest2@4b29d1d2]" started-at="2023-10-31T13:04:36 IST" name="close" finished-at="2023-10-31T13:04:36 IST" duration-ms="356" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.magento.TestngSteps.VerifyLoginUser@2cb4893b]" started-at="2023-11-04T18:30:51 IST" name="loginTest" data-provider="LoginData" finished-at="2023-11-04T18:30:57 IST" duration-ms="6713" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[werttt@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Gopal@1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- com.mageno.TestngCase.ParallelTest2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.magento.TestngSteps.VerifyLoginUser@2cb4893b]" started-at="2023-11-04T18:30:59 IST" name="Teardown" finished-at="2023-11-04T18:31:00 IST" duration-ms="655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- com.magento.TestngSteps.VerifyLoginUser -->
+      <class name="com.magento.TestngSteps.MobileItemVerify">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.magento.TestngSteps.MobileItemVerify@72035809]" started-at="2023-11-04T18:30:11 IST" name="setUp" finished-at="2023-11-04T18:30:20 IST" duration-ms="9713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyHomepageTitle()[pri:0, instance:com.magento.TestngSteps.MobileItemVerify@72035809]" started-at="2023-11-04T18:30:28 IST" name="verifyHomepageTitle" finished-at="2023-11-04T18:30:28 IST" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomepageTitle -->
+        <test-method signature="clickonMobileMenu()[pri:1, instance:com.magento.TestngSteps.MobileItemVerify@72035809]" started-at="2023-11-04T18:30:28 IST" name="clickonMobileMenu" finished-at="2023-11-04T18:30:31 IST" duration-ms="3108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickonMobileMenu -->
+        <test-method signature="verifyMobilePageTitle()[pri:2, instance:com.magento.TestngSteps.MobileItemVerify@72035809]" started-at="2023-11-04T18:30:31 IST" name="verifyMobilePageTitle" finished-at="2023-11-04T18:30:31 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMobilePageTitle -->
+        <test-method signature="selectMobileByName()[pri:3, instance:com.magento.TestngSteps.MobileItemVerify@72035809]" started-at="2023-11-04T18:30:31 IST" name="selectMobileByName" finished-at="2023-11-04T18:30:33 IST" duration-ms="1852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectMobileByName -->
+        <test-method signature="verifyProductName()[pri:4, instance:com.magento.TestngSteps.MobileItemVerify@72035809]" started-at="2023-11-04T18:30:33 IST" name="verifyProductName" finished-at="2023-11-04T18:30:34 IST" duration-ms="602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.TestngSteps.MobileItemVerify@72035809]" started-at="2023-11-04T18:30:58 IST" name="tearDown" finished-at="2023-11-04T18:30:59 IST" duration-ms="1322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.magento.TestngSteps.MobileItemVerify -->
+    </test> <!-- Parallel Test -->
+  </suite> <!-- Suite -->
 </testng-results>

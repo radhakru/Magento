@@ -1,16 +1,16 @@
-package com.magento.Webobject;
+package com.magento.TestngWebObject;
 
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class MobileitemverifyObject {
+public class MobileItemVerifyObject {
 
 	private WebDriver ldriver;
 	private Select select;
@@ -18,7 +18,7 @@ public class MobileitemverifyObject {
 	private static int prev = 0;
 	private static int pres = 0;
 
-	public MobileitemverifyObject(WebDriver rdriver) {
+	public MobileItemVerifyObject(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
@@ -54,6 +54,7 @@ public class MobileitemverifyObject {
 		Assert.assertEquals(ldriver.getTitle(), title);
 
 	}
+
 	//helper method
 	public String[] sortItem() {
 		List<WebElement> arr = ldriver.findElements(ItemList);
