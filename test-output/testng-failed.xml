@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mageno.TestngCase.ParallelTest2">
+      <class name="com.magento.TestngSteps.MobileItemVerify">
         <methods>
-          <include name="firefoxTest"/>
-          <include name="close"/>
+          <include name="tearDown"/>
+          <include name="verifyHomepageTitle"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.mageno.TestngCase.ParallelTest2 -->
+      </class> <!-- com.magento.TestngSteps.MobileItemVerify -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
